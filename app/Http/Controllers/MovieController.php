@@ -9,10 +9,6 @@ use Illuminate\Http\Request;
 
 
 
-use GuzzleHttp\Client;
-use TCG\Voyager\Models\Post;
-
-
 class MovieController extends Controller
 {
     /**
@@ -27,19 +23,6 @@ class MovieController extends Controller
         $carousels = Carousel::all();
         $upcomings = Upcoming::whereId(1)->get();
         $upcomings2 = Upcoming::whereId(2)->get();
-        //
-
-//        $client = new Client();
-//        $api_response = $client->get('https://api.themoviedb.org/3/discover/movie?api_key=9ecdf3e232825fc83834862215b61a5d&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1');
-//        $response = json_decode($api_response->getBody());
-//        $movie1 = ($response->results);
-//
-//        $client = new Client();
-//        $api_response = $client->get('https://api.themoviedb.org/3/discover/movie?api_key=9ecdf3e232825fc83834862215b61a5d&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=2');
-//        $response = json_decode($api_response->getBody());
-//        $movie2= ($response->results);
-
-
 
         return view('index', compact('movies', 'carousels', 'upcomings', 'upcomings2'));
     }
@@ -73,7 +56,7 @@ class MovieController extends Controller
      */
     public function show($id)
     {
-        //
+
     }
 
     /**
@@ -109,4 +92,14 @@ class MovieController extends Controller
     {
         //
     }
+
+    public function movies()
+    {
+
+        $movies = Movie::all();
+        return view('movies', compact('movies'));
+    }
+
+
+
 }

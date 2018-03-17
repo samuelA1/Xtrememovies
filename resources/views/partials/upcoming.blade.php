@@ -11,7 +11,7 @@
                 <img src="{{Voyager::image($upcoming->image)}}" alt="" class="img-fluid">
             </div>
 
-            <div class="col-md-4 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                 <h2 class="title">{{$upcoming->title}}</h2>
                 <p>{{$upcoming->body}}</p>
                 <a href="#" class="btn btn-danger">Get Tickets</a>
@@ -29,7 +29,7 @@
 
         <div class="row about-cols">
             @foreach($upcomings2 as $upcoming2)
-            <div class="col-md-4 wow wow-image fadeInUp" data-wow-delay="0.1s">
+            <div class="col-lg-4 col-md-6 wow wow-image fadeInUp" data-wow-delay="0.1s">
                 <h2 class="title">{{$upcoming2->title}}</h2>
                 <p>{{$upcoming2->body}}</p>
                 <a href="#" class="btn btn-danger">Get Tickets</a>

@@ -39,7 +39,7 @@
     <div class="container-fluid">
 
         <div id="logo" class="pull-left">
-            <h1><a href="#intro" class="scrollto">XMT</a></h1>
+            <h1><a href="{{url('/')}}" class="scrollto">XMT</a></h1>
             <!-- Uncomment below if you prefer to use an image logo -->
             <!-- <a href="#intro"><img src="img/logo.png" alt="" title="" /></a>-->
         </div>
@@ -48,9 +48,10 @@
             <ul class="nav-menu">
                 <li class="menu-has-children"><a href="#">See A Movie</a>
                     <ul>
-                        @foreach($movies as $movie)
-                        <li><a href="#">{{$movie->title}}</a></li>
-                        @endforeach
+                        {{--@foreach($movies as $movie)--}}
+                        {{--<li><a href="#">{{$movie->title}}</a></li>--}}
+                        {{--@endforeach--}}
+                        <li><a style="color: #18d26e" href="{{url('movies')}}">See All</a></li>
                     </ul>
                 </li>
                 <li class="menu-has-children"><a href="#">Our Theatres</a>
