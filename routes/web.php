@@ -22,7 +22,7 @@ Route::group(['prefix' => 'admin'], function () {
 
 Route::get('movies','MovieController@movies');
 
-Route::get('movie/{slug}', function($slug){
-    $movies = App\Movie::where('slug', '=', $slug)->firstOrFail();
-    return view('film', compact('movies'));
-});
+Route::get('movie/{slug}', 'MovieController@films');
+
+Route::get('showtime/{slug}', 'MovieController@showtimes');
+Route::get('seat/{slug}/{time}/{theatre}', 'MovieController@seats');

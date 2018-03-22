@@ -11,7 +11,7 @@
                         <p><span>{{$movie->length}} | <span>{{$movie->viewer_description}}</span></span></p>
                         <span>Released {{$movie->release_date}}</span>
                         <br>
-                        <a href="#" class="btn btn-danger btn-sm">Get Tickets</a>
+                        <a href="{{url('showtime/'. $movie->slug)}}" class="btn btn-danger btn-sm">Get Tickets</a>
                     </div>
                 @endforeach
                     <div class="clients-img">

@@ -11,8 +11,7 @@
                     <div class="carousel-container">
                         <div class="carousel-content">
                             <h2>Tickets on Sale Now</h2>
-                            <p style="font-weight: bold; font-size: large">Rampage</p>
-                            <p>Primatologist Davis Okoye shares an unshakable bond with George, an extraordinarily intelligent, silverback gorilla that's been in his care since birth. Get your tickets at XMC and have fun watching this movie.</p>
+                            <p>Primatologist Davis Okoye shares an unshakable bond with George, an extraordinarily intelligent, gorilla. <strong style="font-weight: bold">Rampage</strong></p>
                             <a href="#" class="btn-get-started scrollto">Get Tickets</a>
                         </div>
                     </div>

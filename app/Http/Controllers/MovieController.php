@@ -3,7 +3,10 @@
 namespace App\Http\Controllers;
 use App\Carousel;
 use App\Movie;
+use App\Theatre;
+use App\Time;
 use App\Upcoming;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 
@@ -21,81 +24,39 @@ class MovieController extends Controller
 
         $movies = Movie::all();
         $carousels = Carousel::all();
+        $theatres = Theatre::all();
         $upcomings = Upcoming::whereId(1)->get();
         $upcomings2 = Upcoming::whereId(2)->get();
 
-        return view('index', compact('movies', 'carousels', 'upcomings', 'upcomings2'));
+        return view('index', compact('movies', 'carousels', 'upcomings', 'upcomings2', 'theatres'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
+    public function showtimes($slug)
     {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
+        $movie = Movie::where('slug', '=', $slug)->firstOrFail();
+        $theatres = Theatre::all();
+        $times = Time::all();
+        $carbon = Carbon::today();
+        return view('showtime', compact('movie', 'theatres', 'times', 'carbon'));
 
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
+    public function seats ($slug, $time, $theatre) {
+        $movie = Movie::where('slug', '=', $slug)->firstOrFail();
+        $time = Time::where('time', '=', $time)->firstOrFail();
+        $theatre = Theatre::where('theatre', '=', $theatre)->firstOrFail();;
+
+        return view('seats', compact('movie', 'time', 'theatre'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
+    public function films($slug)
     {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
+            $movie = Movie::where('slug', '=', $slug)->firstOrFail();
+            return view('film', compact('movie'));
     }
 
     public function movies()
     {
-
         $movies = Movie::all();
         return view('movies', compact('movies'));
     }
