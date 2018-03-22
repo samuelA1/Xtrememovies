@@ -45,8 +45,9 @@ class MovieController extends Controller
         $movie = Movie::where('slug', '=', $slug)->firstOrFail();
         $time = Time::where('time', '=', $time)->firstOrFail();
         $theatre = Theatre::where('theatre', '=', $theatre)->firstOrFail();;
+        $carbon = Carbon::today();
 
-        return view('seats', compact('movie', 'time', 'theatre'));
+        return view('seats', compact('movie', 'time', 'theatre', 'carbon'));
     }
 
     public function films($slug)

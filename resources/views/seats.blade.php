@@ -1,6 +1,6 @@
 @extends('layouts.skeletal')
 @section('info')
-    <div style="width: 100%; height: 50px; background-color: black; color: white; text-align: center; font-weight: bold; font-size: 30px; letter-spacing: 5px;">Showtime
+    <div style="width: 100%; height: 50px; background-color: black; color: white; text-align: center; font-weight: bold; font-size: 20px; letter-spacing: 5px;">Select Seats
         <button style="font-size: 50px; color: white; opacity: 1;" type="button" class="close float-left" aria-label="Close" data-toggle="modal" data-target="#exampleModal">
             <span aria-hidden="true">&times;</span>
         </button>
@@ -9,20 +9,43 @@
         <div class="container">
             <div class="row text-center">
                 <div class="col">
-                    <div class="screen">Screen</div>
+                    <div>
+                        <img class="" style="border-radius: 100%; width: 8%;" src="{{Voyager::image($movie->image)}}" alt="">
+                        <div>
+                            <h2>{{$movie->title}}</h2>
+                            <p style="text-transform: uppercase">
+                                <span>{{$theatre->theatre}}</span>|
+                                <span>{{$carbon->toFormattedDateString()}}</span>|
+                                <span>{{$time->time}}</span>|
+                                <span>RESERVED SEATING</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="screen">SCREEN</div>
                     <div id="messagePanel" class="messagePanel"></div>
+                </div>
+
+                {{--Legend--}}
+                <div style="width: 100%" class="text-center">
+                    <span class="legend"></span><span class="legend-text">Available</span>
+                    <span style="background-color: red" class="legend"></span><span class="legend-text">Selected</span>
                 </div>
             </div>
         </div>
-
-        </div>
     </section>
+
+    <div style="width: 100%; height: 70px; background-color: black; color: white; font-weight: bold; font-size: 20px;">
+        <div class="offset-md-9">
+            <span style="font-size: 15px;" class="seats-selected"></span>
+            <a  class="btn btn-danger disabled continue" role="button" aria-disabled="true" href="#">Continue</a>
+        </div>
+    </div>
 
     @include('includes.modal')
 
     <script src="{{asset('js/jquery.min.js')}}"></script>
 
-    {{--CREATING SEATS--}}
+    {{--CREATING SEATS and SEAT COUNT--}}
 
     <script type="text/javascript">
 
@@ -70,13 +93,25 @@
             $('#messagePanel').html(seatingValue);
 
             $(function(){
+                var selected = 0;
                 $('.seat').on('click',function(){
+
+                    $('.continue').removeClass('disabled');
+
                     if($(this).hasClass( "selected" )){
                         $( this ).removeClass( "selected" );
+                        selected--;
                     }else{
                         $( this ).addClass( "selected" );
+                        selected++;
+                    }
+                    $('.seats-selected').html(selected + ' SEAT(S) SELECTED');
+                    if (selected === 0) {
+                        $('.continue').addClass('disabled');
                     }
                 });
+
+
 
                 $('.seat').mouseenter(function(){
                     $( this ).addClass( "hovering" );
