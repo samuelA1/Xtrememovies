@@ -26,3 +26,5 @@ Route::get('movie/{slug}', 'MovieController@films');
 
 Route::get('showtime/{slug}', 'MovieController@showtimes');
 Route::get('seat/{slug}/{time}/{theatre}', 'MovieController@seats');
+Route::get('ticket/{slug}/{time}/{theatre}/{ticket}/tickets', 'MovieController@tickets');
+Route::get('payment/{slug}/{time}/{theatre}/{adult}/{child}/{senior}/cat', 'MovieController@payments');

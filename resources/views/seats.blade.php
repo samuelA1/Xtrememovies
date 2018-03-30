@@ -4,6 +4,7 @@
         <button style="font-size: 50px; color: white; opacity: 1;" type="button" class="close float-left" aria-label="Close" data-toggle="modal" data-target="#exampleModal">
             <span aria-hidden="true">&times;</span>
         </button>
+        <a  style="color: white" class="float-left" href="{{url('/')}}">Home</a>
     </div>
     <section id="about">
         <div class="container">
@@ -37,7 +38,7 @@
     <div style="width: 100%; height: 70px; background-color: black; color: white; font-weight: bold; font-size: 20px;">
         <div class="offset-md-9">
             <span style="font-size: 15px;" class="seats-selected"></span>
-            <a  class="btn btn-danger disabled continue" role="button" aria-disabled="true" href="#">Continue</a>
+            <a  class="btn btn-danger disabled continue" role="button" aria-disabled="true" href="">Continue</a>
         </div>
     </div>
 
@@ -109,7 +110,13 @@
                     if (selected === 0) {
                         $('.continue').addClass('disabled');
                     }
+
+                    var seats = selected;
+                    var url = "{{url('ticket/'.$movie->slug .'/'.$time->time.'/'.$theatre->theatre)}}" + '/' + seats +'/tickets';
+                    $('.continue').attr("href", url);
                 });
+
+
 
 
 

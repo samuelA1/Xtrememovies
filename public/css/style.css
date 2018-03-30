@@ -36,6 +36,25 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0;
 }
 
+button:focus, input[type="button"]:focus {
+  outline: none;
+}
+
+input:hover, input:active, input:focus {
+  outline: none;
+  text-decoration: none;
+}
+
+hr {
+  display: block;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: inset;
+  border-width: 1px;
+}
+
 /* Prelaoder */
 #preloader {
   position: fixed;
@@ -119,6 +138,7 @@ Seating
   float: left;
 }
 
+
 .screen {
   border-top: solid 40px black;
   border-top-right-radius:50%;
@@ -129,10 +149,21 @@ Seating
   font-weight: bold;
 }
 
+.seat-size {
+  font-size: 30px;
+}
+
 #messagePanel {
   width: 60%;
   margin: 0 auto;
 }
+
+#ticketPanel {
+  width: 30%;
+  margin: 0 auto;
+}
+
+
 .hovering{
   background-color: #ae59b3;
 }
@@ -176,6 +207,34 @@ Seating
     width: 90%;
   }
 }
+
+/*--------------------------------------------------------------
+Payment
+--------------------------------------------------------------*/
+input[type=text], input[type=email] {
+  width: 38%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: none;
+  border-bottom: 1px solid #000;
+}
+
+label {
+  margin-bottom: 10px;
+  display: block;
+}
+
+.icon-container {
+  margin-bottom: 20px;
+  padding: 7px 0;
+  font-size: 24px;
+}
+
+#expmonth,#expyear,#cvv,#zip {
+  width: 100%;
+}
+
+
 
 
 /*--------------------------------------------------------------

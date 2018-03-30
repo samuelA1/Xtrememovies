@@ -12,13 +12,12 @@
                         <div class="carousel-content">
                             <h2>Tickets on Sale Now</h2>
                             <p>Primatologist Davis Okoye shares an unshakable bond with George, an extraordinarily intelligent, gorilla. <strong style="font-weight: bold">Rampage</strong></p>
-                            <a href="#" class="btn-get-started scrollto">Get Tickets</a>
+                            <a href="{{url('showtime/'. 'rampage')}}" class="btn-get-started scrollto">Get Tickets</a>
                         </div>
                     </div>
                 </div>
 
                 @foreach($carousels as $carousel)
-                    {{--{{dd($movie2)}}--}}
 
                     <div class="carousel-item">
                         <div class="carousel-background"><img src="{{Voyager::image($carousel->image)}}" alt=""></div>
@@ -26,11 +25,28 @@
                             <div class="carousel-content">
                                 <h2>{{$carousel->title}}</h2>
                                 <p>{!! $carousel->body !!}</p>
-                                <a href="#" class="btn-get-started scrollto">Get Ticket</a>
+                                <a href="{{url('showtime/'. $carousel->slug)}}" class="btn-get-started scrollto">Get Ticket</a>
                             </div>
                         </div>
                     </div>
+
                 @endforeach
+
+                @foreach($foods as $food)
+
+                    <div class="carousel-item">
+                        <div class="carousel-background"><img src="{{Voyager::image($food->image)}}" alt=""></div>
+                        <div class="carousel-container">
+                            <div class="carousel-content">
+                                <h2>{{$food->name}}</h2>
+                                <p>{!! $food->overview !!}</p>
+                                <a href="#" class="btn-get-started scrollto">Get Food</a>
+                            </div>
+                        </div>
+                    </div>
+
+                @endforeach
+
 
             </div>
 
