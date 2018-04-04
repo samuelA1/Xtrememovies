@@ -23,7 +23,7 @@
             </div>
         </div>
     </section>
-    <footer id="footer" class="footer">
+    <footer id="footer">
         <div class="footer-top">
             <div class="container">
                 <div class="row">

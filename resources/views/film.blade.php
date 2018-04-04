@@ -25,9 +25,6 @@
         <section id="about">
             <div class="container">
 
-                {{--<header class="section-header">--}}
-                    {{--<h3>More from XMT</h3>--}}
-                {{--</header>--}}
 
                 <div class="row about-cols">
 

@@ -13,8 +13,8 @@
                     <ul>
                         <li><i class="ion-ios-arrow-right"></i> <a href="{{url('movies')}}">See a Movie</a></li>
                         <li><i class="ion-ios-arrow-right"></i> <a href="{{url('soon')}}">Coming Soon</a></li>
-                        <li><i class="ion-ios-arrow-right"></i> <a href="#">Food & Drinks</a></li>
-                        <li><i class="ion-ios-arrow-right"></i> <a href="#">Gift Cards</a></li>
+                        <li><i class="ion-ios-arrow-right"></i> <a href="#about">Food & Drinks</a></li>
+                        <li><i class="ion-ios-arrow-right"></i> <a href="{{url('gift-cards')}}">Gift Cards</a></li>
                     </ul>
                 </div>
 

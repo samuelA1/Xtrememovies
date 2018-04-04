@@ -1,23 +1,18 @@
 @extends('layouts.skeletal')
 @section('info')
     <div style="width: 100%; height: 50px; background-color: black; color: white; text-align: center; font-weight: bold; font-size: 20px; letter-spacing: 5px;">Confirm Purchase
-        <button style="font-size: 50px; color: white; opacity: 1;" type="button" class="close float-left" aria-label="Close" data-toggle="modal" data-target="#exampleModal">
-            <span aria-hidden="true">&times;</span>
-        </button>
+        <a  style="color: white" class="float-left" href="{{url('/')}}">Home</a>
     </div>
     <section id="about">
         <div class="container">
             <div class="row text-center">
                 <div class="col">
                     <div>
-                        <img class="" style="border-radius: 100%; width: 8%;" src="{{Voyager::image($movie->image)}}" alt="">
+                        <img style="width: 30%" src="{{asset('img/card.png')}}" alt="" class="img-fluid">
                         <div>
-                            <h2>{{$movie->title}}</h2>
-                            <p style="text-transform: uppercase">
-                                <span>{{$theatre->theatre}}</span>|
-                                <span>{{$carbon->toFormattedDateString()}}</span>|
-                                <span>{{$time->time}}</span>|
-                                <span>RESERVED SEATING</span>
+                            <h2 class="title">XMT Gift Cards</h2>
+                            <p>Don't miss a big day ever again. Have XMT eGift cards instantly delivered to any inbox and don't worry about shipping and handling fees.</p>
+                            <P>When you need to drive results, motivate behavior, express thanks, or share the credits with your employee, the movies are an entertaining solution. Gift Cards and Package Tickets from XMT fit all types of events, reasons and occasions.</P>
                             </p>
                         </div>
                     </div>
@@ -28,8 +23,8 @@
             {{--Billing--}}
             <div class="row text-center">
                 <div id="messagePanel" class="col">
-                    <div class="alert alert-danger" role="alert">
-                        All Fields are Required!
+                    <div class="alert alert-success" role="alert">
+                        Your Gift Card will be sent to your Email!
                     </div>
                     <br>
                     <form>
@@ -107,37 +102,8 @@
                 <div id="messagePanel" class="col">
                     <table class="float-right">
                         <tr>
-                            <th>TICKETS</th>
-                            <th><a href="{{url('seat/'.$movie->slug .'/'.$time->time.'/'.$theatre->theatre)}}" class="font-weight-bold">Edit</a></th>
-                        </tr>
-                        @if($ad > 0)
-                        <tr>
-                            <td><strong>Adult Ticket({{$adult1}})</strong></td>
-                            <td><strong>${{$ad}}</strong></td>
-                        </tr>
-                        @endif
-
-                        @if($ch > 0)
-                        <tr>
-                            <td><strong>Child Ticket({{$child1}})</strong></td>
-                            <td><strong>${{$ch}}</strong></td>
-                        </tr>
-                        @endif
-
-                        @if($se > 0)
-                        <tr>
-                            <td><strong>Senior Ticket({{$senior1}})</strong></td>
-                            <td><strong>${{$se}}</strong></td>
-                        </tr>
-                        @endif
-
-                        <tr>
-                            <td>Taxes</td>
-                            <td>$3.10</td>
-                        </tr>
-                        <tr>
-                            <th style="opacity: 1">TOTAL</th>
-                            <th style="opacity: 1">${{$total}}</th>
+                            <th style="opacity: 1">XMT e-Gift Card</th>
+                            <th style="opacity: 1">$5.00</th>
                         </tr>
                     </table>
                 </div>
@@ -147,8 +113,6 @@
 
     <div style="width: 100%; height: 70px; background-color: black; color: white; font-weight: bold; font-size: 20px;">
         <div class="offset-md-9">
-            <a href="{{url('success')}}" class="btn btn-danger  purchase" aria-disabled="true" role="button">Purchase</a>
+            <a href="{{url('success')}}" class="btn btn-danger  purchase" aria-disabled="true" role="button">Purchase Card</a>
         </div>
     </div>
-
-    @include('includes.modal')

@@ -40,7 +40,7 @@
                             <div class="carousel-content">
                                 <h2>{{$food->name}}</h2>
                                 <p>{!! $food->overview !!}</p>
-                                <a href="#" class="btn-get-started scrollto">Get Food</a>
+                                <a href="#about" class="btn-get-started scrollto">Get Food</a>
                             </div>
                         </div>
                     </div>

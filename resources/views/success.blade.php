@@ -3,7 +3,7 @@
     <div style="width: 100%; height: 50px; background-color: black; color: white; text-align: center; font-weight: bold; font-size: 20px; letter-spacing: 5px;">Success
         <a  style="color: white" class="float-left" href="{{url('/')}}">Home</a>
     </div>
-    <section id="about">
+    <section id="about" style="height: 100%">
         <div class="container">
             <div class="row text-center">
                 <div class="col">
@@ -15,7 +15,7 @@
             </div>
         </div>
     </section>
-    <footer id="footer" class="footer">
+    <footer id="footer">
         <div class="footer-top">
             <div class="container">
                 <div class="row">

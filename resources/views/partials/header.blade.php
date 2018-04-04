@@ -19,19 +19,8 @@
                         <li><a style="color: #18d26e" href="{{url('soon')}}">See All</a></li>
                     </ul>
                 </li>
-                <li class="menu-has-children"><a href="#">Food & Drinks</a>
-                    <ul>
-                        <li><a href="#">Snacks & Meals</a></li>
-                        <li><a href="#">Coca-Cola Freestyle</a></li>
-                    </ul>
-                </li>
-                <li class="menu-has-children"><a href="#">Gift Cards</a>
-                    <ul>
-                        <li><a href="#">Bulk Gift Cards</a></li>
-                        <li><a href="#">E-Card Gift Cards</a></li>
-                        <li><a href="#">Gold Gift Cards</a></li>
-                    </ul>
-                </li>
+                <li class="menu-has-children"><a href="#about">Food & Drinks</a></li>
+                <li class="menu-has-children"><a href="{{url('gift-cards')}}">Gift Cards</a></li>
                 <li><a href="{{url('search')}}">
                         <span  class="fa-stack">
                     <i class="fa fa-search fa-stack-2x"></i>

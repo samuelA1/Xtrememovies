@@ -25,6 +25,7 @@ Route::get('soon','MovieController@soon');
 Route::get('success','MovieController@success');
 Route::get('/search','SearchController@index');
 Route::get('/searched','SearchController@search');
+Route::get('/gift-cards','MovieController@card');
 
 Route::get('movie/{slug}', 'MovieController@films');
 

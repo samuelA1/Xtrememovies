@@ -83,6 +83,11 @@ class MovieController extends Controller
         return view('success');
     }
 
+    public function card()
+    {
+        return view('card');
+    }
+
     public function soon()
     {
         $movies = Soon::all();
