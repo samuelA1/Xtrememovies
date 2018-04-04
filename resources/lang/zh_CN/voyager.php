@@ -72,7 +72,7 @@ return [
         'return_to_list'         => '返回列表',
         'route'                  => '路由',
         'save'                   => '保存',
-        'search'                 => '搜索',
+        'SearchController'                 => '搜索',
         'select_all'             => '选择全部',
         'settings'               => '设置',
         'showing_entries'        => '展示从 :from 到 :to 项结果，共 :all 项|展示从 :from 到 :to 项结果，共 :all 项',

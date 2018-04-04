@@ -73,7 +73,7 @@ return [
         'return_to_list'       => 'Kthehu në listë',
         'route'                => 'Rruga',
         'save'                 => 'Ruaj',
-        'search'               => 'Kërko',
+        'SearchController'               => 'Kërko',
         'select_all'           => 'Zgjidh të gjitha',
         'select_group'         => 'Zgjidh grupin ekzistues ose Shto të ri',
         'settings'             => 'Cilësimet',

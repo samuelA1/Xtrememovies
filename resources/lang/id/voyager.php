@@ -73,7 +73,7 @@ return [
         'return_to_list'         => 'Kembali ke Daftar',
         'route'                  => 'Route',
         'save'                   => 'Simpan',
-        'search'                 => 'Cari',
+        'SearchController'                 => 'Cari',
         'select_all'             => 'Pilih semua',
         'select_group'           => 'Pilih Group atau Buat Baru',
         'settings'               => 'Pengaturan',

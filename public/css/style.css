@@ -40,7 +40,7 @@ button:focus, input[type="button"]:focus {
   outline: none;
 }
 
-input:hover, input:active, input:focus {
+input:hover, input:active, input:focus, select:active, select:hover, select:focus {
   outline: none;
   text-decoration: none;
 }
@@ -53,6 +53,16 @@ hr {
   margin-right: auto;
   border-style: inset;
   border-width: 1px;
+}
+
+.footer {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: red;
+  color: white;
+  text-align: center;
+  z-index: 100;
 }
 
 /* Prelaoder */
@@ -211,7 +221,7 @@ Seating
 /*--------------------------------------------------------------
 Payment
 --------------------------------------------------------------*/
-input[type=text], input[type=email] {
+input[type=text], input[type=email],select {
   width: 38%;
   margin-bottom: 20px;
   padding: 12px;
@@ -230,8 +240,21 @@ label {
   font-size: 24px;
 }
 
-#expmonth,#expyear,#cvv,#zip {
+#expmonth,#expyear,#cvv,#zip,select {
   width: 100%;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 70%;
+}
+
+th, td {
+    padding: 16px;
+}
+th {
+    opacity: 0.5;
 }
 
 
@@ -1166,7 +1189,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   padding: 0 0 30px 0;
   color: #eee;
   font-size: 14px;
-  margin-top: 100px;
+  margin-top: 5px;
 }
 
 #footer .footer-top {

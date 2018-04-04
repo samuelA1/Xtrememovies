@@ -73,7 +73,7 @@ return [
         'return_to_list'         => 'Volver á lista',
         'route'                  => 'Ruta',
         'save'                   => 'Gardar',
-        'search'                 => 'Buscar',
+        'SearchController'                 => 'Buscar',
         'select_all'             => 'Seleccionar todo',
         'select_group'           => 'Seleccione un grupo existente ou engada un',
         'settings'               => 'Axustes',

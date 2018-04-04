@@ -73,7 +73,7 @@ return [
         'return_to_list'         => 'Zpět na seznam',
         'route'                  => 'Cesta',
         'save'                   => 'Uložit',
-        'search'                 => 'Vyhledat',
+        'SearchController'                 => 'Vyhledat',
         'select_all'             => 'Vybrat vše',
         'select_group'           => 'Vybrat existující skupinu nebo vytvořit novou',
         'settings'               => 'Nastavení',

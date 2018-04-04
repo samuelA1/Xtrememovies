@@ -13,7 +13,7 @@
                             <div class="carousel-container">
                                 <div class="carousel-content">
                                     <h2>{{$movie->title}}</h2>
-                                    <a href="#" class="btn-get-started scrollto">Get Tickets</a>
+                                    <a href="{{url('showtime/'. $movie->slug)}}" class="btn-get-started scrollto">Get Tickets</a>
                                 </div>
                             </div>
                         </div>

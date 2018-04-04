@@ -73,7 +73,7 @@ return [
         'return_to_list'         => 'Întoarcere la listă',
         'route'                  => 'Traseu',
         'save'                   => 'Salvare',
-        'search'                 => 'Caută',
+        'SearchController'                 => 'Caută',
         'select_all'             => 'Selectează tot',
         'settings'               => 'Setări',
         'showing_entries'        => 'Publicare afișată de la :from până la :to din :all|Publicări afișate de la :from până la :to din :all',

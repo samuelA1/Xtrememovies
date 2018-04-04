@@ -20,10 +20,10 @@
                         <a href="{{url('movies')}}" class="btn btn-danger btn-sm">See All Movies</a>
                         <br>
                         <br>
-                        <a href="#" class="btn btn-danger btn-sm">Coming Soon</a>
+                        <a href="{{url('soon')}}" class="btn btn-danger btn-sm">Coming Soon</a>
                         <br>
                         <br>
-                        <a href="#" class="btn btn-danger btn-sm">Search</a>
+                        <a href="{{url('search')}}" class="btn btn-danger btn-sm">Search</a>
                     </div>
             </div>
 

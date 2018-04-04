@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use App\Carousel;
 use App\Food;
 use App\Movie;
+use App\Soon;
 use App\Theatre;
 use App\Time;
 use App\Upcoming;
@@ -32,7 +33,12 @@ class MovieController extends Controller
 
     public function showtimes($slug)
     {
-        $movie = Movie::where('slug', '=', $slug)->firstOrFail();
+        $sn = Soon::where('slug', $slug)->first();
+        if ($sn) {
+            $movie =  Soon::where('slug', '=', $slug)->firstOrFail();
+        }else {
+            $movie = Movie::where('slug', '=', $slug)->firstOrFail();
+        }
         $theatres = Theatre::all();
         $times = Time::all();
         $carbon = Carbon::today();
@@ -41,7 +47,12 @@ class MovieController extends Controller
     }
 
     public function seats ($slug, $time, $theatre) {
-        $movie = Movie::where('slug', '=', $slug)->firstOrFail();
+        $sn = Soon::where('slug', $slug)->first();
+        if ($sn) {
+            $movie =  Soon::where('slug', '=', $slug)->firstOrFail();
+        }else {
+            $movie = Movie::where('slug', '=', $slug)->firstOrFail();
+        }
         $time = Time::where('time', '=', $time)->firstOrFail();
         $theatre = Theatre::where('theatre', '=', $theatre)->firstOrFail();;
         $carbon = Carbon::today();
@@ -51,7 +62,13 @@ class MovieController extends Controller
 
     public function films($slug)
     {
+        $sn = Soon::where('slug', $slug)->first();
+        if ($sn) {
+            $movie =  Soon::where('slug', '=', $slug)->firstOrFail();
+        }else {
             $movie = Movie::where('slug', '=', $slug)->firstOrFail();
+        }
+
             return view('film', compact('movie'));
     }
 
@@ -61,8 +78,24 @@ class MovieController extends Controller
         return view('movies', compact('movies'));
     }
 
+    public function success()
+    {
+        return view('success');
+    }
+
+    public function soon()
+    {
+        $movies = Soon::all();
+        return view('soon', compact('movies'));
+    }
+
     public function tickets ($slug, $time, $theatre, $ticket) {
-        $movie = Movie::where('slug', '=', $slug)->firstOrFail();
+        $sn = Soon::where('slug', $slug)->first();
+        if ($sn) {
+            $movie =  Soon::where('slug', '=', $slug)->firstOrFail();
+        }else {
+            $movie = Movie::where('slug', '=', $slug)->firstOrFail();
+        }
         $time = Time::where('time', '=', $time)->firstOrFail();
         $theatre = Theatre::where('theatre', '=', $theatre)->firstOrFail();;
         $carbon = Carbon::today();
@@ -72,15 +105,24 @@ class MovieController extends Controller
     }
 
     public function payments ($slug, $time, $theatre, $adult, $child, $senior) {
-        $movie = Movie::where('slug', '=', $slug)->firstOrFail();
+        $sn = Soon::where('slug', $slug)->first();
+        if ($sn) {
+            $movie =  Soon::where('slug', '=', $slug)->firstOrFail();
+        }else {
+            $movie = Movie::where('slug', '=', $slug)->firstOrFail();
+        }
         $time = Time::where('time', '=', $time)->firstOrFail();
         $theatre = Theatre::where('theatre', '=', $theatre)->firstOrFail();;
         $carbon = Carbon::today();
+        $adult1 = $adult;
+        $child1 = $child;
+        $senior1 = $senior;
         $ad = $adult * 15.99;
         $ch = $child * 13.00;
         $se = $senior * 14.49;
+        $total = $ad + $ch + $se + 3.10;
 
-        return view('payment', compact('movie', 'time', 'theatre', 'carbon', 'ad', 'ch', 'se'));
+        return view('payment', compact('movie', 'time', 'theatre', 'carbon', 'ad', 'ch', 'se', 'adult1', 'child1', 'senior1', 'total'));
     }
 
 

@@ -48,7 +48,7 @@ var GiphySearch = {
     curResponse: null,
     prevResponse: null,
 
-    // search vars
+    // SearchController vars
     curSearchTerm: "",
     prevSearchTerm: "",
 
@@ -105,17 +105,17 @@ var GiphySearch = {
 
         });
 
-        // search input handler
+        // SearchController input handler
         jQuery("#searchbar-input").keypress(function(event) {
-            ////console.log("search bar input");
+            ////console.log("SearchController bar input");
             if(event.keyCode == 13) {
                 GiphySearch.handleSearch.call(this,event);
             }
         });
 
-        // search button handler
-        jQuery("#search-button").on("click", function(event) {
-            //console.log("search button");
+        // SearchController button handler
+        jQuery("#SearchController-button").on("click", function(event) {
+            //console.log("SearchController button");
             GiphySearch.handleSearch.call(this,event);
         });
 
@@ -146,7 +146,7 @@ var GiphySearch = {
     init_chrome_extension:function() {
         
         GiphySearch.PLATFORM_COPY_PREPEND_TEXT = "Copy to clipboard: ";
-        // GiphySearch.search("giphytrending", 100, true);
+        // GiphySearch.SearchController("giphytrending", 100, true);
         GiphySearch.ALLOW_URL_UPDATES = false;
         GiphySearch.STILL_SCROLL_PAGES = 3;
 
@@ -438,7 +438,7 @@ var GiphySearch = {
     handleSearch: function(event) {
         ////console.log("handleSearch()");
 
-        // get the tag to search
+        // get the tag to SearchController
         var tag = jQuery("#searchbar-input").val();
         if(tag == "") return;
 
@@ -450,7 +450,7 @@ var GiphySearch = {
         // reset the scroll and page vars
         // GiphySearch.resetSearch();
 
-        // make the new search
+        // make the new SearchController
         GiphySearch.show_preloader();
         GiphySearch.search(tag, GiphySearch.SEARCH_PAGE_SIZE, true);
         GiphySearch.navigate("gifs");
@@ -476,12 +476,12 @@ var GiphySearch = {
         // reset the scroll and page vars
         // GiphySearch.resetSearch();
         
-        // make the new search
+        // make the new SearchController
         GiphySearch.search(tag, GiphySearch.SEARCH_PAGE_SIZE, true);
         GiphySearch.navigate("gifs");
         // isolate all these,
         // restrict to a flag
-        // GiphySearch.add_history( "Giphy Gif Search", "/search/" + tag.replace(/\s+/g, '-') );
+        // GiphySearch.add_history( "Giphy Gif Search", "/SearchController/" + tag.replace(/\s+/g, '-') );
         
     },
     handleGifDetailByCover:function(event) {
@@ -794,7 +794,7 @@ var GiphySearch = {
     resetSearch: function() {
         ////console.log("resetSearch()");
 
-        // reset the search box
+        // reset the SearchController box
         // jQuery("#searchbar-input").blur();
         jQuery("#searchbar-input").val("");
         // reset the scroll params
@@ -802,7 +802,7 @@ var GiphySearch = {
     },
     process_search_response:function(response) {
         //console.log("fetched API data", response)
-        // set the current search term
+        // set the current SearchController term
         // parse the gifs
         var gifs = response.data;
         var elem_array = [];
@@ -810,7 +810,7 @@ var GiphySearch = {
         
         
         var _frag = document.createDocumentFragment();
-        //console.log("process search response ", _frag);
+        //console.log("process SearchController response ", _frag);
         //console.log("gifs length = " + gifs.length);
         
         for(var i=0; i<gifs.length; i++) {
@@ -890,21 +890,21 @@ var GiphySearch = {
         
     },
     search: function(q, limit, reset) {
-        //console.log("search : " + q + " limit = " + limit + " reset = " + reset);
+        //console.log("SearchController : " + q + " limit = " + limit + " reset = " + reset);
         // if we are searching, bail on scroll
-        // are we a new search vs infinite scroll then reset the gif count
+        // are we a new SearchController vs infinite scroll then reset the gif count
         if(reset) {
             GiphySearch.curGifsNum = 0;
             jQuery('#gifs').empty();
         }
         GiphySearch.show_preloader();
 
-        // save the current and previous search terms
+        // save the current and previous SearchController terms
         GiphySearch.prevSearchTerm = GiphySearch.curSearchTerm;
         GiphySearch.curSearchTerm = q;
 
-        // giphy search api url
-        var url = "http://api.giphy.com/v1/gifs/search?api_key=" + GiphySearch.API_KEY +
+        // giphy SearchController api url
+        var url = "http://api.giphy.com/v1/gifs/SearchController?api_key=" + GiphySearch.API_KEY +
             "&q=" + q +
             //"&type=min" +
             "&limit=" + limit +

@@ -23,7 +23,7 @@
 	var p = f.prototype;
 
 	// Constants, Private Scope
-	var SuggestURL = "https://suggestqueries.google.com/complete/search";
+	var SuggestURL = "https://suggestqueries.google.com/complete/SearchController";
 
 	// The Feed URL structure _requires_ these
 	var CoreDefaults = {

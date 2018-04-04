@@ -73,7 +73,7 @@ return [
         'return_to_list'         => 'Return to List',
         'route'                  => 'Route',
         'save'                   => 'Save',
-        'search'                 => 'Search',
+        'SearchController'                 => 'Search',
         'select_all'             => 'Select All',
         'select_group'           => 'Select Existing Group or Add New',
         'settings'               => 'Settings',

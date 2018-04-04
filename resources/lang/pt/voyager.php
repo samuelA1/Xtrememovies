@@ -70,7 +70,7 @@ return [
         'return_to_list'         => 'Voltar à lista',
         'route'                  => 'Rota',
         'save'                   => 'Guardar',
-        'search'                 => 'Procurar',
+        'SearchController'                 => 'Procurar',
         'select_all'             => 'Selecione Todos',
         'settings'               => 'Configurações',
         'showing_entries'        => 'Mostrando :from a :to de :all entrada|Mostrando :from a :to de :all entradas',

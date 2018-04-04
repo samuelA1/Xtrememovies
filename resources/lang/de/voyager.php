@@ -74,7 +74,7 @@ return [
         'return_to_list'         => 'Zurück zur Liste',
         'route'                  => 'Route',
         'save'                   => 'Speichern',
-        'search'                 => 'Suchen',
+        'SearchController'                 => 'Suchen',
         'select_all'             => 'Alles auswählen',
         'select_group'           => 'Bestehende Gruppe auswählen oder neue Gruppe hinzufügen',
         'settings'               => 'Einstellungen',

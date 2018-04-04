@@ -11,17 +11,12 @@
             <ul class="nav-menu">
                 <li class="menu-has-children"><a href="#">See A Movie</a>
                     <ul>
-                        {{--@foreach($movies as $movie)--}}
-                        {{--<li><a href="#">{{$movie->title}}</a></li>--}}
-                        {{--@endforeach--}}
                         <li><a style="color: #18d26e" href="{{url('movies')}}">See All</a></li>
                     </ul>
                 </li>
-                <li class="menu-has-children"><a href="#">Our Theatres</a>
+                <li class="menu-has-children"><a href="#">Coming Soon</a>
                     <ul>
-                        {{--@foreach($theatres as $theatre)--}}
-                        {{--<li><a href="#">{{$theatre->theatre}}</a></li>--}}
-                        {{--@endforeach--}}
+                        <li><a style="color: #18d26e" href="{{url('soon')}}">See All</a></li>
                     </ul>
                 </li>
                 <li class="menu-has-children"><a href="#">Food & Drinks</a>
@@ -37,22 +32,12 @@
                         <li><a href="#">Gold Gift Cards</a></li>
                     </ul>
                 </li>
-                <li><a href="#">
+                <li><a href="{{url('search')}}">
                         <span  class="fa-stack">
                     <i class="fa fa-search fa-stack-2x"></i>
                   </span>
                     </a>
                 </li>
-                <li><a href="#">|</a></li>
-                <li><a href="#">
-                        <span  class="fa-stack">
-                    <i class="fa fa-film fa-stack-2x"></i>
-                  </span>
-                        Showtimes
-                    </a>
-                </li>
-
-
             </ul>
         </nav><!-- #nav-menu-container -->
     </div>

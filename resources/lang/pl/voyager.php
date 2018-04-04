@@ -73,7 +73,7 @@ return [
         'return_to_list'         => 'Wróć do listy',
         'route'                  => 'Ścieżka',
         'save'                   => 'Zapisz',
-        'search'                 => 'Szukaj',
+        'SearchController'                 => 'Szukaj',
         'select_all'             => 'Zaznacz wszystkie',
         'select_group'           => 'Wybierz istniejącą grupę lub dodaj nową',
         'settings'               => 'Ustawienia',

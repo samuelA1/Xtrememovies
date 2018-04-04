@@ -5014,7 +5014,7 @@ Expr = Sizzle.selectors = {
 				elem.type === "text" &&
 
 				// Support: IE<8
-				// New HTML5 attribute values (e.g., "search") appear with elem.type === "text"
+				// New HTML5 attribute values (e.g., "SearchController") appear with elem.type === "text"
 				( (attr = elem.getAttribute("type")) == null || attr.toLowerCase() === "text" );
 		},
 
@@ -13895,7 +13895,7 @@ if (token) {
   var LARGE_ARRAY_SIZE = 200;
 
   /** Error message constants. */
-  var CORE_ERROR_TEXT = 'Unsupported core-js use. Try https://npms.io/search?q=ponyfill.',
+  var CORE_ERROR_TEXT = 'Unsupported core-js use. Try https://npms.io/SearchController?q=ponyfill.',
       FUNC_ERROR_TEXT = 'Expected a function';
 
   /** Used to stand-in for `undefined` hash values. */
@@ -14457,11 +14457,11 @@ if (token) {
 
   /**
    * A specialized version of `_.includes` for arrays without support for
-   * specifying an index to search from.
+   * specifying an index to SearchController from.
    *
    * @private
    * @param {Array} [array] The array to inspect.
-   * @param {*} target The value to search for.
+   * @param {*} target The value to SearchController for.
    * @returns {boolean} Returns `true` if `target` is found, else `false`.
    */
   function arrayIncludes(array, value) {
@@ -14474,7 +14474,7 @@ if (token) {
    *
    * @private
    * @param {Array} [array] The array to inspect.
-   * @param {*} target The value to search for.
+   * @param {*} target The value to SearchController for.
    * @param {Function} comparator The comparator invoked per element.
    * @returns {boolean} Returns `true` if `target` is found, else `false`.
    */
@@ -14659,7 +14659,7 @@ if (token) {
    * @private
    * @param {Array} array The array to inspect.
    * @param {Function} predicate The function invoked per iteration.
-   * @param {number} fromIndex The index to search from.
+   * @param {number} fromIndex The index to SearchController from.
    * @param {boolean} [fromRight] Specify iterating from right to left.
    * @returns {number} Returns the index of the matched value, else `-1`.
    */
@@ -14680,8 +14680,8 @@ if (token) {
    *
    * @private
    * @param {Array} array The array to inspect.
-   * @param {*} value The value to search for.
-   * @param {number} fromIndex The index to search from.
+   * @param {*} value The value to SearchController for.
+   * @param {number} fromIndex The index to SearchController from.
    * @returns {number} Returns the index of the matched value, else `-1`.
    */
   function baseIndexOf(array, value, fromIndex) {
@@ -14695,8 +14695,8 @@ if (token) {
    *
    * @private
    * @param {Array} array The array to inspect.
-   * @param {*} value The value to search for.
-   * @param {number} fromIndex The index to search from.
+   * @param {*} value The value to SearchController for.
+   * @param {number} fromIndex The index to SearchController from.
    * @param {Function} comparator The comparator invoked per element.
    * @returns {number} Returns the index of the matched value, else `-1`.
    */
@@ -14941,7 +14941,7 @@ if (token) {
    *
    * @private
    * @param {Array} array The array to inspect.
-   * @param {*} placeholder The placeholder to search for.
+   * @param {*} placeholder The placeholder to SearchController for.
    * @returns {number} Returns the placeholder count.
    */
   function countHolders(array, placeholder) {
@@ -15147,8 +15147,8 @@ if (token) {
    *
    * @private
    * @param {Array} array The array to inspect.
-   * @param {*} value The value to search for.
-   * @param {number} fromIndex The index to search from.
+   * @param {*} value The value to SearchController for.
+   * @param {number} fromIndex The index to SearchController from.
    * @returns {number} Returns the index of the matched value, else `-1`.
    */
   function strictIndexOf(array, value, fromIndex) {
@@ -15169,8 +15169,8 @@ if (token) {
    *
    * @private
    * @param {Array} array The array to inspect.
-   * @param {*} value The value to search for.
-   * @param {number} fromIndex The index to search from.
+   * @param {*} value The value to SearchController for.
+   * @param {number} fromIndex The index to SearchController from.
    * @returns {number} Returns the index of the matched value, else `-1`.
    */
   function strictLastIndexOf(array, value, fromIndex) {
@@ -16140,7 +16140,7 @@ if (token) {
      * @private
      * @name has
      * @memberOf SetCache
-     * @param {*} value The value to search for.
+     * @param {*} value The value to SearchController for.
      * @returns {number} Returns `true` if `value` is found, else `false`.
      */
     function setCacheHas(value) {
@@ -16364,7 +16364,7 @@ if (token) {
      *
      * @private
      * @param {Array} array The array to inspect.
-     * @param {*} key The key to search for.
+     * @param {*} key The key to SearchController for.
      * @returns {number} Returns the index of the matched value, else `-1`.
      */
     function assocIndexOf(array, key) {
@@ -17973,7 +17973,7 @@ if (token) {
 
     /**
      * The base implementation of `_.sortedIndex` and `_.sortedLastIndex` which
-     * performs a binary search of `array` to determine the index at which `value`
+     * performs a binary SearchController of `array` to determine the index at which `value`
      * should be inserted into `array` in order to maintain its sort order.
      *
      * @private
@@ -21090,7 +21090,7 @@ if (token) {
      * @category Array
      * @param {Array} array The array to inspect.
      * @param {Function} [predicate=_.identity] The function invoked per iteration.
-     * @param {number} [fromIndex=0] The index to search from.
+     * @param {number} [fromIndex=0] The index to SearchController from.
      * @returns {number} Returns the index of the found element, else `-1`.
      * @example
      *
@@ -21137,7 +21137,7 @@ if (token) {
      * @category Array
      * @param {Array} array The array to inspect.
      * @param {Function} [predicate=_.identity] The function invoked per iteration.
-     * @param {number} [fromIndex=array.length-1] The index to search from.
+     * @param {number} [fromIndex=array.length-1] The index to SearchController from.
      * @returns {number} Returns the index of the found element, else `-1`.
      * @example
      *
@@ -21304,8 +21304,8 @@ if (token) {
      * @since 0.1.0
      * @category Array
      * @param {Array} array The array to inspect.
-     * @param {*} value The value to search for.
-     * @param {number} [fromIndex=0] The index to search from.
+     * @param {*} value The value to SearchController for.
+     * @param {number} [fromIndex=0] The index to SearchController from.
      * @returns {number} Returns the index of the matched value, else `-1`.
      * @example
      *
@@ -21489,8 +21489,8 @@ if (token) {
      * @since 0.1.0
      * @category Array
      * @param {Array} array The array to inspect.
-     * @param {*} value The value to search for.
-     * @param {number} [fromIndex=array.length-1] The index to search from.
+     * @param {*} value The value to SearchController for.
+     * @param {number} [fromIndex=array.length-1] The index to SearchController from.
      * @returns {number} Returns the index of the matched value, else `-1`.
      * @example
      *
@@ -21794,7 +21794,7 @@ if (token) {
     }
 
     /**
-     * Uses a binary search to determine the lowest index at which `value`
+     * Uses a binary SearchController to determine the lowest index at which `value`
      * should be inserted into `array` in order to maintain its sort order.
      *
      * @static
@@ -21845,14 +21845,14 @@ if (token) {
 
     /**
      * This method is like `_.indexOf` except that it performs a binary
-     * search on a sorted `array`.
+     * SearchController on a sorted `array`.
      *
      * @static
      * @memberOf _
      * @since 4.0.0
      * @category Array
      * @param {Array} array The array to inspect.
-     * @param {*} value The value to search for.
+     * @param {*} value The value to SearchController for.
      * @returns {number} Returns the index of the matched value, else `-1`.
      * @example
      *
@@ -21923,14 +21923,14 @@ if (token) {
 
     /**
      * This method is like `_.lastIndexOf` except that it performs a binary
-     * search on a sorted `array`.
+     * SearchController on a sorted `array`.
      *
      * @static
      * @memberOf _
      * @since 4.0.0
      * @category Array
      * @param {Array} array The array to inspect.
-     * @param {*} value The value to search for.
+     * @param {*} value The value to SearchController for.
      * @returns {number} Returns the index of the matched value, else `-1`.
      * @example
      *
@@ -23053,7 +23053,7 @@ if (token) {
      * @category Collection
      * @param {Array|Object} collection The collection to inspect.
      * @param {Function} [predicate=_.identity] The function invoked per iteration.
-     * @param {number} [fromIndex=0] The index to search from.
+     * @param {number} [fromIndex=0] The index to SearchController from.
      * @returns {*} Returns the matched element, else `undefined`.
      * @example
      *
@@ -23090,7 +23090,7 @@ if (token) {
      * @category Collection
      * @param {Array|Object} collection The collection to inspect.
      * @param {Function} [predicate=_.identity] The function invoked per iteration.
-     * @param {number} [fromIndex=collection.length-1] The index to search from.
+     * @param {number} [fromIndex=collection.length-1] The index to SearchController from.
      * @returns {*} Returns the matched element, else `undefined`.
      * @example
      *
@@ -23279,8 +23279,8 @@ if (token) {
      * @since 0.1.0
      * @category Collection
      * @param {Array|Object|string} collection The collection to inspect.
-     * @param {*} value The value to search for.
-     * @param {number} [fromIndex=0] The index to search from.
+     * @param {*} value The value to SearchController for.
+     * @param {number} [fromIndex=0] The index to SearchController from.
      * @param- {Object} [guard] Enables use as an iteratee for methods like `_.reduce`.
      * @returns {boolean} Returns `true` if `value` is found, else `false`.
      * @example
@@ -28059,8 +28059,8 @@ if (token) {
      * @since 3.0.0
      * @category String
      * @param {string} [string=''] The string to inspect.
-     * @param {string} [target] The string to search for.
-     * @param {number} [position=string.length] The position to search up to.
+     * @param {string} [target] The string to SearchController for.
+     * @param {number} [position=string.length] The position to SearchController up to.
      * @returns {boolean} Returns `true` if `string` ends with `target`,
      *  else `false`.
      * @example
@@ -28506,8 +28506,8 @@ if (token) {
      * @since 3.0.0
      * @category String
      * @param {string} [string=''] The string to inspect.
-     * @param {string} [target] The string to search for.
-     * @param {number} [position=0] The position to search from.
+     * @param {string} [target] The string to SearchController for.
+     * @param {number} [position=0] The position to SearchController from.
      * @returns {boolean} Returns `true` if `string` starts with `target`,
      *  else `false`.
      * @example
@@ -41010,7 +41010,7 @@ function isUnknownElement (tag) {
   }
 }
 
-var isTextInputType = makeMap('text,number,password,search,email,tel,url');
+var isTextInputType = makeMap('text,number,password,SearchController,email,tel,url');
 
 /*  */
 
@@ -43775,7 +43775,7 @@ function trigger (el, type) {
 
 /*  */
 
-// recursively search for possible transition defined inside the component root
+// recursively SearchController for possible transition defined inside the component root
 function locateNode (vnode) {
   return vnode.componentInstance && (!vnode.data || !vnode.data.transition)
     ? locateNode(vnode.componentInstance._vnode)

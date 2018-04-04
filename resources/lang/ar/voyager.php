@@ -73,7 +73,7 @@ return [
         'return_to_list'         => 'العودة إلى القائمة',
         'route'                  => 'Route الرابط',
         'save'                   => 'حفظ',
-        'search'                 => 'بحث',
+        'SearchController'                 => 'بحث',
         'select_all'             => 'تحديد الكل',
         'select_group'           => 'اختر مجموعة موجودة أو أضف جديدة',
         'settings'               => 'الإعدادت',

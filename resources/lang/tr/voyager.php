@@ -70,7 +70,7 @@ return [
         'return_to_list'         => 'Listeye dön',
         'route'                  => 'Rota',
         'save'                   => 'Kaydet',
-        'search'                 => 'Bul',
+        'SearchController'                 => 'Bul',
         'select_all'             => 'Tümünü seç',
         'settings'               => 'Ayarlar',
         'showing_entries'        => ':from ile :to arasındaki :all kayıtlar gösteriliyor | :from ile :to arasındaki :all kayıtlar gösteriliyor',

@@ -73,7 +73,7 @@ return [
         'return_to_list'         => 'Повернутись до списку',
         'route'                  => 'Маршрут',
         'save'                   => 'Зберегти',
-        'search'                 => 'Шукати',
+        'SearchController'                 => 'Шукати',
         'select_all'             => 'Вибрати все',
         'settings'               => 'Налаштування',
         'showing_entries'        => 'Показаний від :from до :to з :all запис|Показано від :from до :to з :all записів',
