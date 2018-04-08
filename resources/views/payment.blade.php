@@ -27,7 +27,7 @@
 
             {{--Billing--}}
             <div class="row text-center">
-                <div id="messagePanel" class="col">
+                <div id="messagePanel" class="col payment">
                     <div class="alert alert-danger" role="alert">
                         All Fields are Required!
                     </div>
@@ -104,8 +104,8 @@
                         </div>
                     </form>
                 </div>
-                <div id="messagePanel" class="col">
-                    <table class="float-right">
+                <div id="messagePanel" class="col total">
+                    <table class="">
                         <tr>
                             <th>TICKETS</th>
                             <th><a href="{{url('seat/'.$movie->slug .'/'.$time->time.'/'.$theatre->theatre)}}" class="font-weight-bold">Edit</a></th>

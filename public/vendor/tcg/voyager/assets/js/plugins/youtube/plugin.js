@@ -1,5 +1,5 @@
 /**
- * Youtube SearchController - a TinyMCE youtube SearchController and place plugin
+ * Youtube search - a TinyMCE youtube search and place plugin
  * youtube/plugin.js
  *
  * This is not free software

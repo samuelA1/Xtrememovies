@@ -3,7 +3,7 @@
     <div style="width: 100%; height: 50px; background-color: black; color: white; text-align: center; font-weight: bold; font-size: 20px; letter-spacing: 5px;">Search
         <a  style="color: white" class="float-left" href="{{url('/')}}">Home</a>
     </div>
-    <section id="about" style="height: 100%">
+    <section id="about" >
         <div class="container">
             <div class="row text-center">
                 <div class="col">
@@ -17,7 +17,7 @@
                             </div>
                             <br>
                         </div>
-                        <div class="search"></div>
+                        <div class="search col-lg-8 col-md-10 mx-auto"></div>
                     </div>
                 </div>
             </div>
@@ -25,7 +25,7 @@
     </section>
     <footer id="footer">
         <div class="footer-top">
-            <div class="container">
+            <div class="container footer">
                 <div class="row">
 
                     <div class="col-lg-3 col-md-6 footer-info">

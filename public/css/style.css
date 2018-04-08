@@ -97,7 +97,6 @@ hr {
 .btn-danger {
     font-family: "Montserrat", sans-serif;
     font-weight: 500;
-    font-size: 16px;
     letter-spacing: 1px;
     display: inline-block;
     padding: 8px 32px;
@@ -105,6 +104,12 @@ hr {
     transition: 0.5s;
     margin: 10px;
     color: #fff;
+}
+
+.btn-new {
+  margin-left: -26px;
+  margin-right: -26px;
+  margin-bottom: 0px;
 }
 
 .btn-modal {
@@ -248,7 +253,23 @@ th {
     opacity: 0.5;
 }
 
+@media (max-width: 450px) {
+  .payment {
+    flex-basis: inherit;
+  }
+  .total {
+    flex-grow: 0;
+  }
+}
 
+@media (min-width: 766px) {
+  .payment {
+    flex-basis: 0;
+  }
+  .total {
+    float: right;
+  }
+}
 
 
 /*--------------------------------------------------------------
@@ -783,7 +804,8 @@ body.mobile-nav-active #mobile-nav-toggle {
   margin-bottom: 0;
 }
 
-/* About Us Section
+
+  /* About Us Section
 --------------------------------*/
 #about {
   background: url("../img/about-bg.jpg") center top no-repeat fixed;
@@ -807,6 +829,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 #about .container {
   position: relative;
   z-index: 10;
+  min-height: calc(43vh - 70px);
 }
 
 #about .about-col {
@@ -1025,12 +1048,28 @@ body.mobile-nav-active #mobile-nav-toggle {
 #clients img {
   max-width: 100%;
   opacity: 0.9;
-  padding: 15px 0;
+  padding: 15px 15px;
 }
 
 .clients-img {
-    text-align: center;
+  text-align: center;
   margin-left: 85px;
+}
+
+@media (max-width: 1024px) {
+  .clients-img {
+    margin-left: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .clients-img {
+    margin-left: 80px;
+  }
+}
+
+.movie-img {
+  text-align: center;
 }
 
 #clients img:hover {
@@ -1055,12 +1094,13 @@ body.mobile-nav-active #mobile-nav-toggle {
   background-color: #18d26e;
 }
 
-/*@media (max-width: 767px) {*/
-  /*.clients-img {*/
-  /*}*/
+@media (max-width: 450px) {
+  .clients-img {
+    margin: 0 auto;
+    max-width: 100%;
+  }
 
-/*}*/
-
+}
 
 
 
@@ -1182,6 +1222,11 @@ body.mobile-nav-active #mobile-nav-toggle {
   font-size: 14px;
   margin-top: 5px;
 }
+
+/*.footer {*/
+  /*width:100%;*/
+  /*margin-top: -50px;*/
+/*}*/
 
 #footer .footer-top {
   background: #111;

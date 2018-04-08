@@ -6,7 +6,7 @@
             <h3>Coming Soon</h3>
         </header>
 
-        <div class="row about-cols">
+        <div class="row about-col">
 
             @foreach($movies as $movie)
                 <div class="clients-img col-3">

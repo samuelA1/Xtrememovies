@@ -13,6 +13,6 @@ jQuery(document).ready(function() {
   // init the CMS extension app
   GiphyCMSExt.init();
 
-  // start the default SearchController
+  // start the default search
   GiphySearch.search("giphytrending", 100, true);
 });

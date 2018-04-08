@@ -24,7 +24,7 @@ var YTDataV3 = { /* singleton */
 
 		var q = encodeURIComponent(param.q);
 
-		var url = 'https://www.googleapis.com/youtube/v3/SearchController?q='+q+'&key='+this.key+'&maxResults='+param['max-results']+'&order='+this.order+'&type=video&safeSearch=none&videoEmbeddable=true&part=snippet';
+		var url = 'https://www.googleapis.com/youtube/v3/search?q='+q+'&key='+this.key+'&maxResults='+param['max-results']+'&order='+this.order+'&type=video&safeSearch=none&videoEmbeddable=true&part=snippet';
 
 		if(param.next_page == true) {
 			url += '&pageToken='+this.next_page_token;

@@ -35,7 +35,7 @@
         </div>
     </section>
 
-    <div style="width: 100%; height: 70px; background-color: black; color: white; font-weight: bold; font-size: 20px;">
+    <div style="width: 100%; height: 75px; background-color: black; color: white; font-weight: bold; font-size: 20px;">
         <div class="offset-md-9">
             <span style="font-size: 15px;" class="seats-selected"></span>
             <a  class="btn btn-danger disabled continue" role="button" aria-disabled="true" href="">Continue</a>

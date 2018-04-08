@@ -1,5 +1,5 @@
 /**
- * Youtube SearchController - a TinyMCE youtube SearchController and place plugin
+ * Youtube search - a TinyMCE youtube search and place plugin
  * youtube/js/youtube.js
  *
  * This is not free software
@@ -21,13 +21,13 @@
 	//use Slider or inputfields
 	var slider = true;
 	//Set order
-    //date ï¿½ Resources are sorted in reverse chronological order based on the date they were created.
-    //rating ï¿½ Resources are sorted from highest to lowest rating.
-    //relevance ï¿½ Resources are sorted based on their relevance to the SearchController query. This is the default value for this parameter.
-    //title ï¿½ Resources are sorted alphabetically by title.
-    //viewCount ï¿½ Resources are sorted from highest to lowest number of views.
+    //date – Resources are sorted in reverse chronological order based on the date they were created.
+    //rating – Resources are sorted from highest to lowest rating.
+    //relevance – Resources are sorted based on their relevance to the search query. This is the default value for this parameter.
+    //title – Resources are sorted alphabetically by title.
+    //viewCount – Resources are sorted from highest to lowest number of views.
 	var order = 'relevance';
-    //Use suggest SearchController words
+    //Use suggest search words
     var suggest = true;
     //Set default width and height
     var width = 560;

@@ -5,25 +5,25 @@
             </header>
             <div class="owl-carousel clients-carousel">
                 @foreach($movies as $movie)
-                    <div class="clients-img">
+                    <div class="movie-img">
                         <a href="{{url('movie/'. $movie->slug)}}"><img src="{{Voyager::image($movie->image)}}" alt=""></a>
                         <h4>{{$movie->title}}</h4>
                         <p><span>{{$movie->length}} | <span>{{$movie->viewer_description}}</span></span></p>
                         <span>Released {{$movie->release_date}}</span>
                         <br>
-                        <a href="{{url('showtime/'. $movie->slug)}}" class="btn btn-danger btn-sm">Get Tickets</a>
+                        <a href="{{url('showtime/'. $movie->slug)}}" class="btn btn-danger btn-sm btn-new">Get Tickets</a>
                     </div>
                 @endforeach
-                    <div class="clients-img">
+                    <div class="movie-img">
 
                         <h4>Not Finding What You're Looking For?</h4>
-                        <a href="{{url('movies')}}" class="btn btn-danger btn-sm">See All Movies</a>
+                        <a href="{{url('movies')}}" class="btn btn-danger btn-sm btn-new">See All Movies</a>
                         <br>
                         <br>
-                        <a href="{{url('soon')}}" class="btn btn-danger btn-sm">Coming Soon</a>
+                        <a href="{{url('soon')}}" class="btn btn-danger btn-sm btn-new">Coming Soon</a>
                         <br>
                         <br>
-                        <a href="{{url('search')}}" class="btn btn-danger btn-sm">Search</a>
+                        <a href="{{url('search')}}" class="btn btn-danger btn-sm btn-new ">Search</a>
                     </div>
             </div>
 
